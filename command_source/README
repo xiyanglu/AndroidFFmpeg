@@ -1,0 +1,24 @@
+1、关于ffmpeg的说明：
+如果要想编译多个so文件,需要修改ffmpeg/configure文件,将
+
+SLIBNAME_WITH_MAJOR='$(SLIBNAME).$(LIBMAJOR)'
+LIB_INSTALL_EXTRA_CMD='$$(RANLIB) "$(LIBDIR)/$(LIBNAME)"'
+SLIB_INSTALL_NAME='$(SLIBNAME_WITH_VERSION)'
+SLIB_INSTALL_LINKS='$(SLIBNAME_WITH_MAJOR) $(SLIBNAME)'
+
+修改为：
+
+SLIBNAME_WITH_MAJOR='$(SLIBPREF)$(FULLNAME)-$(LIBMAJOR)$(SLIBSUF)'
+LIB_INSTALL_EXTRA_CMD='$$(RANLIB) "$(LIBDIR)/$(LIBNAME)"'
+SLIB_INSTALL_NAME='$(SLIBNAME_WITH_MAJOR)'
+SLIB_INSTALL_LINKS='$(SLIBNAME)'
+
+这样编译出来的so命名才符合android的使用。
+
+
+2、关于X264支持多线程的说明：
+
+默认x264 多线程encode是不开启的，这样encode效率比较低，原因是找不到NDL的pthread相应的库，添加encode NDK多线程支持修改内容见
+下面链接：
+标题：交叉编译支持多线程的Android版X264库
+http://bashell.nodemedia.cn/archives/cross-complie-pthread-android-x264-library.html

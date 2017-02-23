@@ -1,0 +1,14 @@
+prefix=/Users/guohe/workspace/ffmpeg_build_lib//build
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 6.65.100
+Requires: libswscale >= 4.2.100, libpostproc >= 54.1.100, libswresample >= 2.3.100, libavformat >= 57.56.100, libavcodec >= 57.64.101, libavutil >= 55.34.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavfilter -lx264 -lm -lz -pthread
+Libs.private: 
+Cflags: -I${includedir}
