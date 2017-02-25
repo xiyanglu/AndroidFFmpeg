@@ -1,4 +1,4 @@
-prefix=/Users/guohe/workspace/AndroidFFmpeg/app/src/main/jni//build
+prefix=/Users/guohe/GitHub/AndroidFFmpeg/app/src/main/jni//build
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

@@ -3,6 +3,7 @@
 本项目的主要内容有：
     - Android平台移植/编译FFmpeg，x264
     - 将ffmpeg可执行文件改造成库文件，通过JNI实现Java执行ffmpeg命令
+    - 实现了一个简单音视频混合程序，用于测试ffmpeg命令
 
 项目具体介绍参见
 [Android 编译FFmpeg x264](http://blog.csdn.net/matrix_laboratory/article/details/56490404)
@@ -17,6 +18,13 @@ export NDK=YOUR_NDK_PATH
 ```
 ./build_ffmpeg_with_x264.sh
 ```
+- 把项目导入AndroidStudio，然后编译运行
+
+# 运行结果
+
+![这里写图片描述](http://img.blog.csdn.net/20170225141546144?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWF0cml4X2xhYm9yYXRvcnk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
+![这里写图片描述](http://img.blog.csdn.net/20170225141604316?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWF0cml4X2xhYm9yYXRvcnk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 # License
 Copyright 2015 Taylor Guo <lovenight@126.com>

@@ -71,8 +71,6 @@ fi
 #拷贝ffmpeg静态库和头文件到jni下相应目录
 #$PREFIX/lib/*.a->./lib
 #$PREFIX/include/*->./
-cp $PREFIX/lib/*.a ./lib
-cp -r $PREFIX/include/* ./
 
 #执行ndk-build
 $NDK/ndk-build
