@@ -6,15 +6,19 @@
 
 项目具体介绍参见
 [Android 编译FFmpeg x264](http://blog.csdn.net/matrix_laboratory/article/details/56490404)
-
+[Android Java调用ffmpeg命令](http://blog.csdn.net/matrix_laboratory/article/details/56677084)
 
 # 编译
-执行项目中build_ffmpeg_with_x264.sh脚本
+- 设置NDK环境变量
+```
+export NDK=YOUR_NDK_PATH
+```
+- 执行项目中build_ffmpeg_with_x264.sh脚本
 ```
 ./build_ffmpeg_with_x264.sh
 ```
 
-## License
+# License
 Copyright 2015 Taylor Guo <lovenight@126.com>
 
 Licensed under the Apache License, Version 2.0 (the "License");
