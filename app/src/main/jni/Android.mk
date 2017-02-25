@@ -95,8 +95,8 @@ LOCAL_C_INCLUDES := $(FFMPEG_ROOT) \
 
 LOCAL_MODULE := ffmpeg_cmd
 LOCAL_SRC_FILES :=  \
-	ffmpeg_cmd.c \
-	ffmpeg_cmd_wrapper.c \
+	libffmpeg_main/ffmpeg_cmd.c \
+	libffmpeg_main/ffmpeg_cmd_wrapper.c \
 	libffmpeg_main/cmdutils.c \
 	libffmpeg_main/ffmpeg.c \
 	$(FFMPEG_ROOT)/ffmpeg_opt.c \
